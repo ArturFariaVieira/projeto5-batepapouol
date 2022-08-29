@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo.css" rel="stylesheet">  
+      <title>Document</title>
+</head>
+
+<body onload="fazerlogin()">
+    <div class="paginatoda">
+        <div class="lateralesquerdo escondido" onclick="escondeusuarios()"></div>
+        <div class="lateraldireito escondido">
+            <div class="direitoTopo">Escolha um contato<br>para enviar uma mensagem:</div>
+            <div class="direitousuarios">
+                <div class="usuario todos selecionado">
+                    <ion-icon class="people" name="people"></ion-icon>
+                    Todos
+                    <ion-icon class="checkmark" name="checkmark-sharp"></ion-icon>
+                </div>
+                <div class="usuario Maria">
+                    <ion-icon class="person-circle" name="person-circle"></ion-icon>
+                    Maria
+                    <ion-icon class="checkmark escondido" name="checkmark-sharp"></ion-icon>
+                </div>
+
+            </div>
+            <div class="direitovisibilidade">
+                <div class="titulovisibilidade"> Escolha a visibilidade:</div>
+                <div class="publico selecionado" onclick="clicouvisibilidade(this)"> 
+                    <ion-icon class="lock" name="lock-open"></ion-icon>
+                    Público
+                    <ion-icon class="checkmark" name="checkmark-sharp"></ion-icon>
+                </div>
+                <div class="reservadamente" onclick="clicouvisibilidade(this)">
+                    <ion-icon class="lock" name="lock-open"></ion-icon>
+                    Reservadamente
+                    <ion-icon class="checkmark escondido" name="checkmark-sharp"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="menutopo">
+            <div class="logo"> <img src="img/logo 1.png" /> 
+            </div>
+            <div class="botaousuarios"><img src="img/Vector-1.png" onclick="mostramenu()" />
+            </div>
+        </div>
+
+        <div class="caixamensagens">
+           
+
+
+        </div>
+        <input type="text" placeholder="Escreva aqui..."><p>Enviando para todos</p></input>
+
+
+    </div>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
