@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="estilo.css" rel="stylesheet">  
-      <title>Document</title>
+      <title>Bate Papo Driven</title>
 </head>
 
 <body onload="fazerlogin()">
@@ -14,27 +14,16 @@
         <div class="lateralesquerdo escondido" onclick="escondeusuarios()"></div>
         <div class="lateraldireito escondido">
             <div class="direitoTopo">Escolha um contato<br>para enviar uma mensagem:</div>
-            <div class="direitousuarios">
-                <div class="usuario todos selecionado">
-                    <ion-icon class="people" name="people"></ion-icon>
-                    Todos
-                    <ion-icon class="checkmark" name="checkmark-sharp"></ion-icon>
-                </div>
-                <div class="usuario Maria">
-                    <ion-icon class="person-circle" name="person-circle"></ion-icon>
-                    Maria
-                    <ion-icon class="checkmark escondido" name="checkmark-sharp"></ion-icon>
-                </div>
-
+            <div class="direitousuarios">    
             </div>
             <div class="direitovisibilidade">
                 <div class="titulovisibilidade"> Escolha a visibilidade:</div>
-                <div class="publico selecionado" onclick="clicouvisibilidade(this)"> 
+                <div class="publico selecionado" data-identifier="visibility" onclick="clicouvisibilidade(this)"> 
                     <ion-icon class="lock" name="lock-open"></ion-icon>
                     Público
                     <ion-icon class="checkmark" name="checkmark-sharp"></ion-icon>
                 </div>
-                <div class="reservadamente" onclick="clicouvisibilidade(this)">
+                <div class="reservadamente" data-identifier="visibility" onclick="clicouvisibilidade(this)">
                     <ion-icon class="lock" name="lock-open"></ion-icon>
                     Reservadamente
                     <ion-icon class="checkmark escondido" name="checkmark-sharp"></ion-icon>
@@ -53,7 +42,8 @@
 
 
         </div>
-        <input type="text" placeholder="Escreva aqui..."><p>Enviando para todos</p></input>
+        <input type="text" placeholder="Escreva aqui..." id="input"><p>Enviando para todos</p></input>
+        <ion-icon class="paper_plane" name="paper-plane-outline" id="botaoenvia" onclick="enviamsg()"></ion-icon>
 
 
     </div>
